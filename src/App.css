@@ -51,7 +51,7 @@
 .button {
   height: 100%;
   width: 10%;
-  background-color: rgb(17, 178, 247);
+  background-color: rgb(107, 191, 227);
   border-radius: 5px;
   border: none;
   font-size: 18px;
@@ -80,6 +80,7 @@
   width: 44%;
   height: 45px;
   margin-top: 10px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: transparent;
   border-radius: 5px;
   align-items: center;
@@ -88,7 +89,7 @@
 }
 
 .row > h2 {
-  color: rgb(17, 178, 247);
+  color: rgb(107, 191, 227);
   pointer-events: auto;
 }
 
