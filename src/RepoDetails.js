@@ -25,10 +25,8 @@ function RepoDetails({ details, loading }) {
                 <label className="label">Open Issues:</label>
                 <span className='value'>{details.open_issues_count}</span>
             </div>
-            <div className='details-row'>
-                <label className="label">License:</label>
-                <span className='value'>{details.license}</span>
-            </div>
+           
+           
            
 
         </div>

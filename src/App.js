@@ -3,14 +3,14 @@ import './App.css';
 import React, { useState } from 'react'
 import RepoDetails from './RepoDetails';
 import axios from 'axios'
-import { Card, Button } from 'react-bootstrap'
+
 
 function App() {
 
   const [orgName, setOrgName] = useState("")
   const [loading, setIsLoading] = useState(false)
   const [repos, setRepos] = useState([])
-  const [details, setDetails] = useState([])
+  const [details, setDetails] = useState({})
   const [detailsLoading, setDetailsLoading] = useState(false)
 
   function handleSubmit(e) {
@@ -43,7 +43,7 @@ function App() {
       
       <div className="row" 
       onClick={() => getDetails(repo.name)} key={repo.id}>
-        <img src={repo.owner.avatar_url} width="40px" />
+        <img src={repo.owner.avatar_url} alt={repo.name} width="40px" />
         <h2 className='repo-name'>
           {repo.name.charAt(0).toUpperCase() + repo.name.slice(1)}
         </h2>
