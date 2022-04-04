@@ -43,13 +43,14 @@ function App() {
       
       <div className="row" 
       onClick={() => 
-      console.log("name:", repo.name, 
-      "watchers:", repo.watchers,
-      "forks:", repo.forks,
-      "open issues:", repo.open_issues_count,
-      "license:", repo.license,
-      )} 
-
+        getDetails(repo.name)
+      } 
+      // console.log("name:", repo.name, 
+      // "watchers:", repo.watchers,
+      // "forks:", repo.forks,
+      // "open issues:", repo.open_issues_count,
+      // "license:", repo.license,
+      // )
     
       key={repo.id}>
         <img src={repo.owner.avatar_url} width="40px" />
@@ -61,23 +62,24 @@ function App() {
     )
   }
 
-  // function getDetails(name) {
-  //   setDetailsLoading(true)
-  //   axios({
-  //     method: 'get',
-  //     url: `https://api.github.com/orgs/${orgName}/${name}`,
-  //   }).then(res => {
-  //     if (res) {
-  //       console.log("Worked!!");
-  //       setDetailsLoading(false)
-  //       setDetails(res.data)
-  //       console.log(res.data)
-  //     } else {
-  //       console.log("Did not work!")
-  //       console.log(res)
-  //     }
-  //   })
-  // }
+  function getDetails(name) {
+    setDetailsLoading(true)
+    axios({
+      method: 'get',
+      url: `https://api.github.com/repos/${orgName}/${name}`,
+
+    }).then(res => {
+      if (res) {
+        console.log("Worked!!");
+        setDetailsLoading(false)
+        setDetails(res.data)
+        console.log(res.data)
+      } else {
+        console.log("Did not work!")
+        console.log(res)
+      }
+    })
+  }
 
   return (
     <div className="page">
@@ -87,7 +89,7 @@ function App() {
             <input
               className='input'
               value={orgName}
-              placeholder="Search Organizations..."
+              placeholder="Search Organization"
               onChange={e => setOrgName(e.target.value)}
             />
             <button className="button" onClick={handleSubmit} >{loading ? "Searching..." : "Search"} </button>
