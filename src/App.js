@@ -10,7 +10,7 @@ function App() {
   const [orgName, setOrgName] = useState("")
   const [loading, setIsLoading] = useState(false)
   const [repos, setRepos] = useState([])
-  const [details, setDetails] = useState({})
+  const [details, setDetails] = useState([])
   const [detailsLoading, setDetailsLoading] = useState(false)
 
   function handleSubmit(e) {
@@ -42,17 +42,7 @@ function App() {
     return (
       
       <div className="row" 
-      onClick={() => 
-        getDetails(repo.name)
-      } 
-      // console.log("name:", repo.name, 
-      // "watchers:", repo.watchers,
-      // "forks:", repo.forks,
-      // "open issues:", repo.open_issues_count,
-      // "license:", repo.license,
-      // )
-    
-      key={repo.id}>
+      onClick={() => getDetails(repo.name)} key={repo.id}>
         <img src={repo.owner.avatar_url} width="40px" />
         <h2 className='repo-name'>
           {repo.name.charAt(0).toUpperCase() + repo.name.slice(1)}
