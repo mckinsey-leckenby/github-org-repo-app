@@ -12,6 +12,7 @@ function App() {
   const [repos, setRepos] = useState([])
   const [details, setDetails] = useState({})
   const [detailsLoading, setDetailsLoading] = useState(false)
+  const [license, setLicense] = useState({})
 
   function handleSubmit(e) {
     e.preventDefault()
