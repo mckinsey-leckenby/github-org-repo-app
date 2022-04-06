@@ -26,10 +26,10 @@ function RepoDetails({ details, loading }) {
                 <label className="label">Open Issues:</label>
                 <span className='value'>{details.open_issues_count}</span>
             </div>
-            <div className='details-row'>
+            {/* <div className='details-row'>
                 <label className="label">License:</label>
-                <span className='value' key={details.license.key}>{details.license.name}</span>
-            </div>
+                <span className='value' ></span>
+            </div> */}
            
            
 
