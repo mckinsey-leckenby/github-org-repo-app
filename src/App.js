@@ -76,11 +76,12 @@ function App() {
     <div className="page">
       <div className="landing-page-container">
         <div className="left-side">
+        <h1 >Github Public Repos</h1>
           <form className='form'>
             <input
               className='input'
               value={orgName}
-              placeholder="Search Organization"
+              placeholder="Search Organization..."
               onChange={e => setOrgName(e.target.value)}
             />
             <button className="button" onClick={handleSubmit} >{loading ? "Searching..." : "Search"} </button>
