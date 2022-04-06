@@ -28,7 +28,7 @@ function RepoDetails({ details, loading }) {
             </div>
             <div className='details-row'>
                 <label className="label">License:</label>
-                <span className='value'></span>
+                <span className='value' key={details.license.key}>{details.license.name}</span>
             </div>
            
            
