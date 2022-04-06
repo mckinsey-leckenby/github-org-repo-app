@@ -12,7 +12,7 @@ function RepoDetails({ details, loading }) {
         <div className="repo-details-container">
             <div className='details-row'>
                 <label className="label">Name:</label>
-                <span className='value'>{details.name.toUpperCase()}</span>
+                <span className='value'>{details.name}</span>
             </div>
             <div className='details-row'>
                 <label className="label">Watchers:</label>
@@ -28,7 +28,7 @@ function RepoDetails({ details, loading }) {
             </div>
             <div className='details-row'>
                 <label className="label">License:</label>
-                <span className='value'>{details.license.name} </span>
+                <span className='value'></span>
             </div>
            
            
