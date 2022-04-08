@@ -1,6 +1,6 @@
 
 import './App.css';
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import RepoDetails from './RepoDetails';
 import axios from 'axios'
 
@@ -10,9 +10,14 @@ function App() {
   const [orgName, setOrgName] = useState("")
   const [loading, setIsLoading] = useState(false)
   const [repos, setRepos] = useState([])
-  const [details, setDetails] = useState({})
+  const [details, setDetails] = useState([])
   const [detailsLoading, setDetailsLoading] = useState(false)
-  const [license, setLicense] = useState({})
+  
+  useEffect(() => {
+    setRepos([])
+    setDetails({})
+  }, [orgName])
+  
 
   function handleSubmit(e) {
     e.preventDefault()
@@ -27,7 +32,8 @@ function App() {
       url: `https://api.github.com/orgs/${orgName}/repos`,
     }).then(res => {
       if (res) {
-        console.log("Worked!!");
+        console.log("Worked!!")
+       
         setIsLoading(false)
         setRepos(res.data)
         console.log(res.data)
@@ -65,6 +71,7 @@ function App() {
         setDetailsLoading(false)
         setDetails(res.data)
         console.log(res.data)
+        
       } else {
         console.log("Did not work!")
         console.log(res)
@@ -90,7 +97,7 @@ function App() {
             {repos.map(renderRepo)}
           </div>
         </div>
-        <RepoDetails details={details} loading={detailsLoading} />
+        <RepoDetails  details={details} loading={detailsLoading} />
       </div>
     </div>
   );

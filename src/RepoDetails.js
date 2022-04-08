@@ -1,12 +1,12 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
-function RepoDetails({ details, loading }) {
+function RepoDetails({ details, loading, license }) {
+ 
     if (loading) {
         return (
             <h1 className='loader'>Loading...</h1>
         )
     }
-    
  
     return (
         <div className="repo-details-container">
@@ -28,11 +28,10 @@ function RepoDetails({ details, loading }) {
             </div>
             {/* <div className='details-row'>
                 <label className="label">License:</label>
-                <span className='value' ></span>
+                <span className='value' >{details.license.name}</span>
             </div> */}
            
            
-
         </div>
     )
 }
