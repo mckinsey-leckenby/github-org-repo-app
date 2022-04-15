@@ -1,16 +1,31 @@
-import React, { useState, useEffect } from 'react'
+import React, {useState} from 'react'
 
-function RepoDetails({ details, loading, license }) {
- 
+function RepoDetails({ details, loading }) {
+
+
     if (loading) {
         return (
             <h1 className='loader'>Loading...</h1>
         )
     }
- 
+    const visit = (obj, fn) => {
+        const values = Object.values(obj)
+    
+        values.forEach(val => 
+            val && typeof val === "object" ? visit(val, fn) : fn(val))
+    }
+
+    const print = (val) => console.log(val)
+
+visit(details, print)
+
     return (
+      
+ 
         <div className="repo-details-container">
+      
             <div className='details-row'>
+           
                 <label className="label">Name:</label>
                 <span className='value'>{details.name}</span>
             </div>
@@ -29,10 +44,12 @@ function RepoDetails({ details, loading, license }) {
             <div className='details-row'>
                 <label className="label">Language:</label>
                 <span className='value' >{details.language}</span>
-            </div>
+                
+                </div>
+               
+                </div>
            
-           
-        </div>
+ 
     )
 }
 

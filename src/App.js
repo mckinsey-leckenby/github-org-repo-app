@@ -29,7 +29,8 @@ function App() {
     setIsLoading(true)
     axios({
       method: 'get',
-      url: `https://api.github.com/orgs/${orgName}/repos`,
+      // url: `https://api.github.com/orgs/${orgName}/repos`,
+      url: `https://api.github.com/users/${orgName}/repos`,
     }).then(res => {
       if (res) {
         console.log("Worked!!")
@@ -88,7 +89,7 @@ function App() {
             <input
               className='input'
               value={orgName}
-              placeholder="Search Organization..."
+              placeholder="Search..."
               onChange={e => setOrgName(e.target.value)}
             />
             <button className="button" onClick={handleSubmit} >{loading ? "Searching..." : "Search"} </button>
