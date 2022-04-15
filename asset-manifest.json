@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/github-org-repo-app/static/css/main.bbc7f7f4.css",
+    "main.css": "/github-org-repo-app/static/css/main.7d35cb73.css",
     "main.js": "/github-org-repo-app/static/js/main.c88040b8.js",
     "index.html": "/github-org-repo-app/index.html",
-    "main.bbc7f7f4.css.map": "/github-org-repo-app/static/css/main.bbc7f7f4.css.map",
+    "main.7d35cb73.css.map": "/github-org-repo-app/static/css/main.7d35cb73.css.map",
     "main.c88040b8.js.map": "/github-org-repo-app/static/js/main.c88040b8.js.map"
   },
   "entrypoints": [
-    "static/css/main.bbc7f7f4.css",
+    "static/css/main.7d35cb73.css",
     "static/js/main.c88040b8.js"
   ]
 }
