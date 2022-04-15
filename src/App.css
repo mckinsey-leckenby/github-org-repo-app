@@ -142,3 +142,63 @@ h1 {
   color: rgb(17, 178, 247);
   margin-left: 5%;
 }
+@media screen and (max-width: 480px){
+  .page {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 40px;
+  }
+  form{
+    margin-top: 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.results-container{
+  font-size: 10px;
+  text-align: left;
+}
+  .repo-details-container{
+    flex-direction: column;
+    text-align: left;
+    margin-top: 30px
+  }
+  .input{
+    font-size: 15px;
+  }
+  .button{
+    height: 50%;
+    width: 20%;
+    font-size: 15px;
+  }
+  .landing-page-container{
+    display: inline-flex;
+  }
+  .label {
+    font-weight: bold;
+    
+    color: #696C71;
+    font-size: 10px;
+  }
+  .value{
+    font-size: 10px;
+   
+  }
+  h1{
+    font-size: 30px;
+  }
+  .left-side {
+    height: 75%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid rgb(17, 178, 247);
+  }
+  .details-row {
+    height: 20px;
+    width: 70%;
+    display: flex;
+    align-items: left;
+  }
+  
+  
+}
